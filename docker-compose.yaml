@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  delta-docker:
+    image: deltaio/delta-docker:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./delta:/opt/spark/work-dir/delta:rw
+      - ./data:/opt/spark/work-dir/data:rw
+      - ./notebooks:/opt/spark/work-dir/notebooks:rw
+      - ./utils:/opt/spark/work-dir/utils:rw
+      - ./logs:/opt/spark/work-dir/logs:rw
+      - ./resources://opt/spark/work-dir/resources:ro
+
+    user: NBuser
