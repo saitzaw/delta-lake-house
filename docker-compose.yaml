@@ -11,6 +11,7 @@ services:
       - ./notebooks:/opt/spark/work-dir/notebooks:rw
       - ./utils:/opt/spark/work-dir/utils:rw
       - ./logs:/opt/spark/work-dir/logs:rw
-      - ./resources://opt/spark/work-dir/resources:ro
+      - ./resources:/opt/spark/work-dir/resources:ro
+      - ./configs:/opt/spark/work-dir/configs:ro
 
     user: NBuser
